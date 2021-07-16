@@ -1,0 +1,248 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 間距 */
+.mb-2 {
+	margin-bottom: 16px;
+}
+
+.mb-4 {
+	margin-bottom: 32px;
+}
+
+.mb-5 {
+	margin-bottom: 40px;
+}
+
+.mb-7 {
+	 margin-bottom: 56px;
+}
+
+.ml-3 {
+   margin-left: 24px;
+}
+
+.pt-7 {
+	padding-top: 56px;
+}
+/* 間距 end */
+
+/* 共同樣式 */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.font-m {
+	font-size: 24px;
+}
+
+.subTitle {
+	font-size: 64px;
+	line-height: 1.3;
+	text-align: center;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.bg-black {
+   background: #000000;
+   color: #FFFFFF;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.wrap {
+	width: 1920px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+/* 共同樣式  end*/
+
+/* banner */
+.banner {
+	width: 1920px;
+    height: 958px;
+	background: url("https://i.imgur.com/2w8Lnkh.png") no-repeat center;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-container { 
+	width: 304px;
+	color: #FFFFFF;
+}
+
+.banner-title  h1{
+	 font-size: 80px;
+	 line-height: 1.3;
+}
+
+.socialMedia{
+	justify-content: space-between;
+}
+
+.socialMedia a{
+	display: block;
+	transition: 0.5s;
+}	
+
+.socialMedia a:hover{
+	transform: scale(1.2);
+}	
+/* banner-end */
+
+/* about */
+.profile {
+	width: 412px;
+	margin: 0 auto;
+}
+
+.profile-content {
+	padding-bottom: 24px;
+	margin-bottom: 28px;
+	border-bottom: 1px solid #000;
+}
+
+.profile-content img {
+	margin-bottom: 20px;
+}
+
+.profile-position {
+	padding-bottom: 28px;
+}
+
+.profile-position li {
+	margin-bottom: 28px;
+}
+
+.profile-position li:before {
+	content: "";
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	border-radius: 50%;
+	background: #891818;  
+	vertical-align: middle;
+	margin-right: 14px;
+}
+/* about-end */
+
+/* brand */
+.brand {
+	padding-bottom: 160px;
+}
+
+.brand-content {
+	width: 320px;
+	margin: 0 auto;
+	margin-bottom: 68px;
+}
+
+.brand-cards {
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+/* brand  end*/
+
+/* works */
+.works {
+  padding-bottom: 96px;
+}
+
+.works p {
+	text-align: center;
+} 
+
+.works-cards {
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.works-cards  li {
+    margin-bottom: 48px;
+}
+
+.works-cards  img {
+	margin-bottom: 16px;
+} 
+/* /* works-end */
+
+/* footer */
+.footer-content {
+	text-align: center;	
+	padding-bottom: 40px;
+}
+
+.footer-content a {
+	text-decoration: none;
+	color: #FFFFFF;
+	transition: 0.5s;
+}
+
+.footer-content a:hover {
+   opacity: 0.6;
+}
+/* footer end */

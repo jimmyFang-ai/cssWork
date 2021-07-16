@@ -1,0 +1,214 @@
+
+
+ 
+ 
+第二週 
+1. 先看設計稿，並先畫圖規劃階層和內外框，共同樣式設定
+    共同樣式:
+      外層: width 1920px
+
+      字體: Roboto
+           
+      行高:  1.5
+    
+      區塊間距: mb-7 56px
+  
+      避免 Collapsing margins: li 子層區塊下margin，父層要下padding
+
+    
+   html:
+      baner:(滿版)
+        -背景圖 background-size: cover 
+        -文字區塊水平居中
+        -間距 mb-4  mb-5
+        -icon ul>li>a>img
+
+      profile:
+          - h2 .subTitle + ul>li*3
+          - li 間距 mb28px
+
+      brand(滿版):
+          - bg-black 內距 pt56pX pb160px
+          - 背景色 bg-black
+          - color: text-primary : white
+          - div.brand>h2> li*5 > p*2 img*3
+
+      works:
+          - ul (d-flex flex-wrap) > li * 8
+          - 不用寫死寬度 
+          
+      footer(滿版):
+          - 背景色 bg-black pt Pb 64px
+          - container .footer 
+          - mail: li{mail}>a[href:"xxxd@hexschool.com"]{xxxd@hexschool.com}
+          - h2> li> a  mb16px
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+檢視重點：找出共同設定(全域概念)
+
+字體:
+順序：英文字型 > Linux系統 > Mac系統 > Windows > 基礎字體
+（如果中文字型在前，那麼網頁可能會讀取不到英文的字體，所以用越少的放前面）
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+                                /* mac, IOS 系統字體                   Windows 英文系統字  微軟正黑體 Android 系統字  IOS 系統字  通用字體 */             
+}
+
+
+
+行高:
+設計稿的問題（元素高、字行高）常見設定方法
+* 用倍數
+* 只會統一設定在以下地方
+          body {
+               line-height: 1.5; /* 16*1.5=36px */
+                }
+          h1, h2, h3, h4, h5, h6 {
+                line-height: 1.2;
+                }
+   
+大小:
+h1 和 .h1 的差別
+標題標籤有自己的語意，所以使用時是看語意而不是字體大小
+     
+     <h2 class="h2"></h2>
+
+     .h2{
+       fonst-size: 32px;
+     }
+
+     .font-sm{
+         fonst-size:
+         }
+      .font-m{
+          fonst-size:
+         }
+      .font-lg{
+           fonst-size:
+         }
+
+px 和 rem (https://www.hexschool.com/2016/01/02/2016-08-08-em-vs-rem)
+rem 準取決於最外層的文字大小
+
+        body{
+           font-size: 24px; /* 意思是 1rem = 16px*/
+          }
+        .h1{
+            font-size: 3rem; /*  3*16-> 48px */
+           }
+
+色彩:
+       primary → 主色
+       secondary → 次要色
+       warning → 警告（黃色）
+       danger → 危險（紅色）
+       light →
+
+       text-primary {
+          color: blue;
+             }
+      .bg-light{
+          background-color: lightblue;
+            }
+
+    
+間距:
+        m - margin 
+        p - padding 
+        t - top 
+        b - bottom 
+
+         margin-bottom = mb
+
+      
+        /* 使用倍數 */
+          .mb-1{
+            margin-bottom: 8px;
+            }
+
+
+共同設定
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+大小
+色彩
+間距
+
+
+
+
+CSS 模組化
+
+為什麼需要模組化？
+哪些不需要被模組化？只用一次
+命名請完整，ex: .tac→ .text-center, .c-wh → .text-white, .d-fl → .d-flex, .d-inli → .d-inline
+不要用流水號 sec1, sec2, img1, img2、方向 top, middle, bottom → profile, skills ...
+→ 要語意化，讓自己十年後都看得懂！
+Bootstrap utils 命名 (https://getbootstrap.com/docs/4.0/utilities/flex)
+
+
+
+
+如何做到 1 px 也不差？
+
+1. 文字行高＋字體大小+字型
+2. 間距
+3. box-sizing: border-box (內容寬高可不包含 padding, border)
+
+注意：圖片空隙 img通常有2~3px的圖片空隙  要用vertical-align: middle; display: block;做調整
+
+
+container
+
+* 什麼是 container？將最重要的內容放在畫面中間（像是一個容器）
+
+ .container {
+        width:;
+        margin: 0 auto;
+    } 
+
+怎麼算出容器寬度？
+看設計稿的佈局網格 
+算法有兩種：
+
+1) 12*78 + 24*11 = 1200px
+
+2) 1920 - 360*2 = 1200px
+
+container & wrap 差別在哪？
+
+<div class="wrap">
+    <div class="profile">
+        <div class="container">
+            <h2>...</h2>
+        </div>
+    </div>
+     ....
+</div>
+
+
+

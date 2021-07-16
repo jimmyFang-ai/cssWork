@@ -1,0 +1,12 @@
+
+恭喜你完成「第一週 - 個人履歷」
+
+「Joanne Chen」這一段文字建議可以使用 h1 標籤。 v
+img 標籤屬性 alt 建議可以填入替代文字。原因是當網路讀取較慢時，可以出現相對應文字告知使用者。 v
+「個人資料」區塊有嘗試使用 ul li 結構很棒喔，建議裡面的文字可以再用 p 標籤來包住。v
+「聯絡區塊」像是 mail, phone, 作品連結等都可以使用 a 標籤，並加上 hover 效果，mail 跟 phone 可以使用 a:mail, a:tel 寫成如下，當使用者透過手機點擊該區塊時，就會自動開啟相對功能：
+<li>Mail：<a href="mailto:xxxd@hexschool.com">xxxd@hexschool.com</a></li>
+<li>Phone：<a href="tel:+886-910123456">0910123456</a></li>
+「聯絡區塊」底下的三個社群 icon，建議可以再使用一層 ul > li > a > img 的結構來包住喔！ v
+img 標籤建議可以使用 display: block 來清除多餘的空白處。v
+

@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 共同樣式 */
+img {
+    max-width: 100%;
+	height: auto;
+}
+html {
+	color: #3F5D45;
+}
+a {
+	text-decoration: none;
+	color: #3F5D45;
+}
+body {
+	font-family: PingFang TC;
+}
+
+/* 外容器樣式 */
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+
+/* header */
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+	align-items: center;
+}
+
+.menu {
+	display: flex;
+}
+
+.menu a {
+	display: block;
+	padding: 10px 30px  8px;
+	transition: 0.5s;
+}
+
+.menu a:hover{
+	background: #3F5D45;
+	color: #fff;
+}
+
+.banner {
+	margin-bottom: 60px;
+}
+
+/* main */
+.main {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+   /* aside */
+.aside {
+  width: 300px;
+}
+
+.aside h2 {
+	background: #3F5D45;
+	color: #fff;
+	font-size: 24px;
+    line-height: 65px;
+	text-align: center;
+}
+
+
+.aside li a {
+	line-height: 65px;
+	font-size: 24px;
+	text-align: center;
+	display: block;
+	border: 1px solid #EAF0ED;
+	transition: 0.5s;
+}
+
+/* 因為高度為65px  加上、下 border 1px  有多出1px，要用margin-bottom -1px*/
+.aside li {
+    margin-bottom: -1px;
+}
+
+.aside li a:hover {
+    background: #EAF0ED;
+}
+
+   /* card */
+.productList {
+	width: 620px;
+}
+
+.productList-card {
+	display: flex;	
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.productList-card li {
+	width: 300px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+   /* 本日精選 定位 */
+.productList-card .tag {
+	position: absolute;
+	background: #3F5D45;
+	color: #fff;
+	padding: 10px;
+    left: 20px;
+	top: 0;
+	letter-spacing: 5px; 
+	/*  */
+	writing-mode: vertical-lr;
+}
+
+   /* 我的最愛  */
+.productList-card .heart {
+	position: absolute;
+	top: 19px;
+	right: 22px;
+	font-size: 20px;
+}
+
+.productList-card .productList-card-body {
+	display: flex;
+	border-bottom: 1px solid #EAF0ED;
+	border-left: 1px solid #EAF0ED;
+	border-right: 1px solid #EAF0ED;
+	font-size: 20px;
+	line-height: 65px;
+}
+
+.productList-card .productList-card-body h2 {
+	width: 173px;
+	text-align: center;
+	border-right: 1px solid #EAF0ED;
+}
+
+.productList-card .productList-card-body span{
+	width: 127px;
+	text-align: center;
+}
+
+
+.productList-card .productList-card-cart{
+	display: block;
+	background: #EAF0ED;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+    line-height: 65px;
+}
+
+/* pagination */
+.pagination {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.pagination-list {
+	display: flex;
+}
+
+.pagination-list a {
+	display: block;
+	font-size: 20px;
+	padding: 16px 24px;
+	text-align: center;
+	border: 1px solid #EAF0ED;
+}
+
+.pagination-list a:hover {
+	background: #3F5D45;
+	color: #fff;
+}
+
+.mt-1{
+	margin-bottom: 10px;
+}

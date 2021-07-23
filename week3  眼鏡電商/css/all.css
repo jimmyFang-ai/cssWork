@@ -1,0 +1,467 @@
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*cssReset END */
+
+/* rwdReset 必要添加的樣式 */
+
+/* 讓圖片自適應父層 100% 等比例縮放，不會破版 */
+img {
+    max-width: 100%;
+    height: 0 auto;
+}
+
+/* 盒模型 */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* rwdReset end */
+
+/* 共同樣式工具 */
+body {
+	font-family: 'Noto Sans TC','Roboto', sans-serif;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+input[type="text"],input[type="tel"],input[type="email"]{
+  display: block;
+  font-size: 16px;
+  padding: 10px 14px;
+  width: 100%;
+  line-height: 1.5;
+}
+
+  /* 間距 */
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-3 {
+	margin-bottom: 24px;
+}
+
+.mb-4 {
+	margin-bottom: 32px;
+}
+
+.mb-5 {
+	margin-bottom: 40px;
+}
+
+.mb-6 {
+	margin-bottom: 48px;
+}
+
+.mb-10 {
+	margin-bottom: 80px;
+}
+
+.mr-4 {
+	margin-right: 32px;
+}
+
+.mr-6 {
+	margin-right: 48px;	
+}
+
+ /* 大小 */
+.font-m {
+	font-size: 24px;
+}
+
+.hero-title2 {
+	font-size: 48px;
+	color: #650300;
+	font-weight: bold;
+}
+
+  /* 背景色 */
+.bg-primary {
+	background-color: #AA0601;
+	color: #FFFFFF;
+}
+
+.bg-secondary {
+	background-color: #AA06010D;
+    color: #650300;
+}
+
+/* 文字顏色 */ 
+.text-white {
+	color: #FFFFFF;
+}
+
+ /* 文字居中 */
+.text-center {
+	text-align: center;
+}
+
+  /* 容器 */
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 60px 0 80px;
+}
+
+  /* flrx */
+.d-flex {
+	display: flex;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.align-items-center {
+	align-items: center;
+}
+/* 共同樣式工具 end */
+
+/* 首頁 */
+.homePageWrap {
+	max-width: 1920px;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+/* navbar-header */
+.navbar-header {
+	max-width: 1744px;
+	margin: 0 auto;
+	padding: 28px 80px;
+}
+
+.header-logo {
+	width: 80px;
+	height: 49px;
+	background: url("https://i.imgur.com/M0TDEN8.png");
+    text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.header-menu {
+	width: 512px;
+}
+
+.header-menu a {
+	padding: 10px;
+	transition: 0.6s;
+}
+
+.header-menu a:hover{
+    background-color: #FFFFFF;
+	color: #AA0601;
+}
+/* navbar-header end */
+
+/* banner */   
+.banner { 
+	height: 840px;
+	background: url("https://i.imgur.com/DiV3kQj.png") no-repeat center center;
+	background-size: cover;
+}
+
+.banner-container{
+	justify-content: flex-end;
+	max-width: 1100px;	
+	margin: 0 auto;
+	/* 要自適應父層高度，沒設定樣式的話 align-items: center 會吃不到*/
+	height: 100%; 
+}
+
+.banner-title p {
+	color: #650300;
+	text-align: right;
+	font-size: 36px;
+}
+/* banner end */
+
+/* sloganIconBar */
+.sloganIconBar li {
+	width: 225px;
+	color: #650300;
+}
+
+.sloganIconBar h3 {
+     font-size: 24px;
+	 text-align: center;
+	 margin-bottom: 8px;
+	 font-weight: bold;
+}
+
+.sloganIconBar p {
+	color: #000000;
+}
+
+.sloganIcons {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	margin-bottom: 24px;
+}
+
+.sloganIcon-price {
+    background: url("../images/icon-dollar.svg") no-repeat;
+}	
+
+.sloganIcon-clock {
+    background: url("../images/icon-clock.svg") no-repeat;
+}	
+
+.sloganIcon-heart {
+    background: url("../images/icon-heart.svg") no-repeat;
+}	
+
+.sloganIcon-glasses {
+    background: url("../images/icon-glasses.svg") no-repeat;
+}	
+
+/* sloganIconBar end*/
+
+/* product-classic */
+.classic-cards li{
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+} 
+
+.classic-cards h3 {
+	font-size: 48px;
+	font-weight: 900;
+	font-family:  'Roboto';
+	font-style: italic;
+	color: #AA0601;
+}
+
+.classic-cards img {
+	max-width: 656px;
+	vertical-align: middle;
+}
+
+.classic-cards li:nth-child(2) {
+	display: flex;
+	flex-direction: row-reverse;
+}
+/* product-classic  end*/
+
+/* product-crossover  */
+.product-crossover {
+  height: 705px;
+  background: url("https://i.imgur.com/eEbUaql.png") no-repeat center center #FFFFFF;
+  background-size: cover;
+}
+
+.card-item {
+	position: relative;
+	width: 540px;
+	height: 455px;
+    background: #FFFFFF;
+	overflow: hidden;
+}
+
+.card-image {
+	width: 100%;
+	opacity: 0.5;
+}
+
+.card-item p {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	color: #AA0601;
+	z-index: 1;
+	font-size: 72px;
+	text-align: center;
+	font-family: 'Roboto';
+}
+/* product-crossover end */
+
+/* recommend */
+.recommend-list li{
+	width: 255px;
+	height: 460px;
+	box-shadow: 0px 2px 6px #00000029;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.recommend-list li:hover {
+   transform: scale(1.1);
+}
+
+.recommend-list img {
+	height: 256px;
+	vertical-align: middle;
+}
+
+.recommend-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 44%;
+	padding: 16px;
+}
+
+.recommend-content p {
+	font-size: 16px;
+}
+
+.recommend-content span {
+	font-size: 14px;
+}
+/* recommend end */
+
+/* contacts-container */
+.contacts-container {
+	max-width: 730px;
+	margin: 0 auto;
+	padding-top: 60px;
+	padding-bottom: 80px;
+	color: #000000
+}
+
+.contacts-container p {
+	margin-bottom: 20px;
+}
+
+.formList textarea {
+  display: block;
+  padding: 16px;
+  width: 100%;
+  height: 136px;	
+}
+
+.formList label {
+  font-size: 16px;
+}
+
+.checkBtn {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+.btn {
+	position: relative;
+}
+
+.btn input {
+	padding: 16px 143px;
+    background: #AA0601;
+	color:#FFFFFF;
+	position: absolute;
+    right: 28%;
+}
+/* contacts-container end */
+
+/* footer container */
+.footer {
+	padding: 32px 0  39px;
+	font-size: 16px;
+}
+
+.footer img {
+	vertical-align: middle;
+}
+
+.footer-navbar {
+	margin-bottom: 36px;
+}
+
+.navbar-menu {
+	width: 464px;
+}
+
+.navbar-menu a {
+	 transition: 0.5s;
+	 padding: 10px;
+}
+
+.navbar-menu a:hover {
+   background: #FFFFFF;
+   color: #AA0601; 	
+}
+
+.socialMedia {
+	width: 208px;
+}
+
+.socialMedia a , .contacts-info a{
+   transition: 0.5s;
+}
+
+.socialMedia a:hover , .contacts-info a:hover {
+	transform: scale(1.1);
+}
+
+.contacts-info {
+	font-size: 36px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.contacts-info img {
+	margin-right: 20px;
+}
+
+.contacts-info a {
+	display: inline-block;
+}
+/* footer container end */
+/* 首頁  end*/

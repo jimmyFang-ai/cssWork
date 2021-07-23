@@ -1,0 +1,90 @@
+RWD 響應式網頁 (禁止有X軸)
+
+版型:
+   pc(解析度992x):   三欄式版型      子層寬度: 30%
+   平板(解析度768px): 二欄式版型      子層寬度: 48%    padding 0 15px 切換手機板或平板時，內容居中留白較容易閱讀
+   手機(解析度375px): 一欄式版型      子層寬度: 100%   排版方向從上到下，軸線改成	flex-direction: column;
+
+開版reset:
+   cssReset+   img(避免圖片應縮放時破版) +    盒模型: *, *::before, *::after  {box-sizing: border-box;}
+              {
+                max-width 100%;
+                height: auto; (自適應高度) 
+              }
+
+
+ rwd +flex:
+    
+        外容器: .container{
+	                    max-width: 1000px;
+                    	margin: 0 auto;
+                       }
+                       .news {
+	                           display: flex;
+	                           justify-content: space-between;
+	                           flex-wrap: wrap;
+                             }
+                             .news li {
+	                              width: 30%;
+	                              margin-bottom: 24px; (可以被@media (max-width:768px)的.news li繼承)
+                             }
+   
+        內容器:   @media (max-width:768px) {
+	                     .container{
+	                          	padding: 0 15px;
+	                           }
+	                       .news li {
+		                          width: 48% (會蓋掉前面的CSS樣式)
+	                           }
+                           }
+
+
+
+區塊元素: 佔滿整版面，自適應父層等比例縮放寬高，不用額外寫width,height
+
+行內元素: 在板型等比例縮放時，大於或小於元素本身的寬高，容易破版 (img、 a)
+
+
+
+html:
+    head: <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             (reset 裝置解析度)
+
+css樣式覆蓋(先看權重，在看樣式) 
+   css權重: 
+       html標籤選擇器 1分 ex: h1 a            (css、scss使用)
+       類別選擇器: 10分 ex: title wrap        (css、scss使用)
+       id選擇器:100分 (不要拿來設計css樣式)    (js使用)
+       inline style : 1000分                  (js使用)
+       !important: 10000分
+
+  css樣式:
+      同樣命名的CSS樣式名稱: 後面的設定會覆蓋前面的樣式設定
+
+
+
+max-width兩種寫法差異:
+  css @media語法:
+       @media(max-width)螢幕解析度以下
+       從螢幕解析度大→小寫
+        PC→平板→手機
+
+  
+  max-width(寫在容器內): 
+            1.自適應父層寬度等比例縮放，不會出現X軸
+            2.最大可達指定px
+            ex: 避免圖片破版
+             img {
+                max-width 100%;
+                height: auto; (自適應高度) 可加在共同樣式
+            }
+
+    percent用法:
+      不要寫死寬度，寫percent，可以自是應父層縮放內容
+
+      假設 父層寬度為100px
+           子層設寬度設20% => 100*20% =50px
+ 
+      組合技:
+          cntainer:    父層  max-width: 100px
+          li >.卡片圖案:  子層  width: 30%

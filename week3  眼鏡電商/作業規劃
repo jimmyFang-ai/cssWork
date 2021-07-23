@@ -1,0 +1,73 @@
+共同樣式:
+   
+body {fsz:20px  line-hight: 1.5  }  V
+
+字體: 思源黑體 TW "Noto Sans CJK TC"  V
+
+大小:
+       font-m: 24px    V
+
+間距:
+   block 區塊間 mb-80px (mb-10)           V
+     -元件區塊推擠: mb-6  mb-1 mb-3 mb-5    V
+
+顏色: 
+   bg-pink: contacts、product idea  V
+   bg-red: navber 、footer     V
+
+
+wrap: max-width: 1920px     v
+   
+hero-title2 {
+	font-size: 64px;
+	color: #650300
+}                          V
+hero-title3 {
+   color: blue;
+}                        V
+
+container(內容器): max-width: 1100px  m0-auto p60-80(footer除外要另外寫) V
+
+navbar、footer: #AA0601 
+
+   
+   
+
+navbar(df jcsp #AA0601):
+    -h1>a>img
+    -manu> li>a
+
+baner
+   (bg: url no-repeat size:cover df jcsa aic)  height: 0-auto:
+    -title-content:   p+ h2     width: 30% 
+
+bg-pinK ( color: #AA06010D  bg: #650300 p60-80)
+     -product-idea container :
+          - h2 subtitle  mb48px
+          - ul >li*4> icon mb-3 > h3(fsz24px) mb-1 > p
+
+
+main: 
+   products-category-classic (p60-80)     
+    - container > h2  mb-5> ul> li*3 (df) >img >h3
+   products-category-crossover (p60-80) bg: url  
+    - container > h2 (color: white) >ul> li*2 (bg: url df jcc aic)>h3 (fsz 72)
+ 
+recommend:    recommend-content(推擠不完整)
+    - container > h2.subtitle+ ul(df jcsb)>li*4> img+ div.content(padding 16px df fdc jcsb)> .div (h3+p) + span
+       
+contacts:  #AA06010D
+          contacts-conten> h2 subtitle mb-3 + p + form>label*4+input*5 +button
+   
+bg-red: padding 32 39
+      container > 
+                .footer-navbar (df jcsbmb3 6px ) > ul.footer-menu (df jcsb)>li*4 + ul.socialMedia(df jcsb) >li*3>a>img
+                .footer-contacts > ul> li*2 (fa + a:tel + fa + a:mai)  
+                   hr
+                .copyright> p + span 
+
+
+
+常見問題版型:
+     
+            container p96 128> h2 .subtitle border-lf mb60px >hero3 Noto Sans bold mb36px >  ul>li*5  mb-4 >+ span Noto Sans bold mb-2 +p tac

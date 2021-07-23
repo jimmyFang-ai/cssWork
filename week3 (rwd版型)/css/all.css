@@ -175,12 +175,14 @@ input[type="text"],input[type="tel"],input[type="email"]{
 	line-height: 1.5;
 }
 
-@media (max-width:768px) {
+@media  (max-width:1100px)  {
 	.container  {
 		width: 90%;
 		padding: 40px 0 0;
 	}
+}
 
+@media (max-width:768px) {
 	.hero-title2 {
 		font-size: 32px;
 		margin-bottom: 32px;
@@ -243,6 +245,13 @@ input[type="text"],input[type="tel"],input[type="email"]{
 	font-size: 36px;
 }
 
+@media (max-width:1100px) {
+	.banner-container  {
+		width: 69%;
+	}
+}
+
+
 @media (max-width:768px) {
 	.banner-container {
        padding-right: 40px;
@@ -288,11 +297,25 @@ input[type="text"],input[type="tel"],input[type="email"]{
 	align-items: center;
 }
 
+@media (max-width:1100px) {
+	.sloganIcon-container {
+		width: 80%;
+	}
+
+	.sloganIconBar  {
+		flex-wrap: wrap;
+	}
+ 
+    .sloganIconBar li {
+        width: 48%;
+		margin-bottom: 40px;
+	}
+}
+
+
 @media (max-width:768px) {
 	.sloganIcon-container {
 	    padding: 40px 0 0;
-       width: 80%;
-		margin: 0 auto;
 	}
 
 	.sloganIcon-container h2 {
@@ -300,13 +323,7 @@ input[type="text"],input[type="tel"],input[type="email"]{
 	}
 
 	.sloganIconBar  {
-		flex-wrap: wrap;
 		padding-bottom: 16px;
-	}
-    
-	.sloganIconBar li {
-        width: 48%;
-		margin-bottom: 40px;
 	}
 
 	.sloganIcons {
@@ -348,27 +365,30 @@ input[type="text"],input[type="tel"],input[type="email"]{
 	vertical-align: middle;
 }
 
-@media (max-width: 768px) {
-   .classic-cards {
-	  padding-bottom: 48px;
-   }
 
-    .classic-cards li {
+@media (max-width:1100px) {
+	.classic-cards li  {
+		max-width: 768px;
 		margin-bottom: 8px;
 	}
 
 	.classic-cards li:nth-child(2) {
 		flex-direction: row;
 	}
+ 
+     .classic-img {
+		 width: 56%;
+	 }
 
     .classic-cards h3 {
 		font-size: 28px;
 	}
 
-	.classic-img {
-		width: 57%;
-	}
+	.classic-cards {
+		padding-bottom: 48px;
+	 }
 }
+
 /* product-classic  end*/
 
 /* product-crossover  */
@@ -405,7 +425,7 @@ input[type="text"],input[type="tel"],input[type="email"]{
 	font-family: 'Roboto';
 }
 
-@media (max-width:768px) {
+@media (max-width:1100px) {
    .product-crossover {
 	   height: 452px;
    }
@@ -418,13 +438,12 @@ input[type="text"],input[type="tel"],input[type="email"]{
 	.card-item p {
 		font-size: 32px;
 	}
-
 }
 /* product-crossover end */
 
 /* recommend */
 .recommend-list li{
-	width: 255px;
+	width: 23%;
 	height: 460px;
 	box-shadow: 0px 2px 6px #00000029;
     border: 1px solid #DEE2E6;
@@ -438,6 +457,7 @@ input[type="text"],input[type="tel"],input[type="email"]{
 }
 
 .recommend-list img {
+	width: 100%;
 	height: 256px;
 	vertical-align: middle;
 }
@@ -458,7 +478,7 @@ input[type="text"],input[type="tel"],input[type="email"]{
 	font-size: 14px;
 }
 
-@media (max-width:768px) {
+@media (max-width:1100px) {
     .recommend-list {
 		flex-wrap: wrap;
 		padding-bottom: 24px;
